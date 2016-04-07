@@ -1,0 +1,13 @@
+<h1>Videogur!</h1>
+<%= link_to "Add Video", "/videos/new" %>
+
+<p>
+<div>
+<% @videos.each do |video| %>
+  <div>
+    <a href="videos/<%=video.id%>"></h2><%= "#{video.title}, #{video.author}, rating: #{video.rating}, #{video.description}" %></h2></a>
+  <p>
+  <iframe src="<%=video.url%>" width="1000" height="416" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+<% end %>
+</div>

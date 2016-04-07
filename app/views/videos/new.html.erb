@@ -1,0 +1,28 @@
+<h1>Add Video</h1>
+<%= link_to "Back", "/videos" %>
+
+<%= form_for @video do |v| %>
+  <div>
+  <%= v.label :title %>
+  <%= v.text_field :title %>
+  </div>
+  <div>
+  <%= v.label :author %>
+  <%= v.text_field :author %>
+  </div>
+  <div>
+  <%= v.label :description %>
+  <%= v.text_area :description %>
+  </div>
+  <div>
+  <%= v.label :rating %>
+  <%= v.text_field :rating %>
+  </div>
+  <div>
+  <%= v.label :url %>
+  <%= v.text_field :url %>
+  </div>
+  <div>
+  <%= v.submit %>
+  </div>
+<% end %>
