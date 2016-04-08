@@ -1,20 +1,21 @@
 Rails.application.routes.draw do
   root 'videos#index'
-  get 'videos' => 'videos#index'
-
-  # CREATE
-  get 'videos/new' => 'videos#new'
-  post 'videos' => 'videos#create'
-
-  # READ
-  get 'videos/:id' => 'videos#show', as: 'video'
-
-  # UPDATE
-  get 'videos/:id/edit' => 'videos#edit', as: 'edit_video'
-  patch 'videos/:id' => 'videos#update'
-
-  # DELETE
-  delete 'videos/:id' => 'videos#destroy', as: 'delete_video'
+  resources :videos
+  # get 'videos' => 'videos#index'
+  #
+  # # CREATE
+  # get 'videos/new' => 'videos#new'
+  # post 'videos' => 'videos#create'
+  #
+  # # READ
+  # get 'videos/:id' => 'videos#show', as: 'video'
+  #
+  # # UPDATE
+  # get 'videos/:id/edit' => 'videos#edit', as: 'edit_video'
+  # patch 'videos/:id' => 'videos#update'
+  #
+  # # DELETE
+  # delete 'videos/:id' => 'videos#destroy', as: 'delete_video'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
